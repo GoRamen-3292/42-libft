@@ -1,3 +1,5 @@
 .DS_Store
 test*
+!test.c
 *.o
+a.out
