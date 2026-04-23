@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 17:02:49 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 17:36:45 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int		int_tester(const int exp, const int res);
 void	display_memory(void *ptr, t_size_t size);
 void	memset_test(int val);
 void	bzero_test(void);
+void	memcpy_test(void);
 
 int	main(void)
 {
@@ -52,12 +53,14 @@ int	main(void)
 	memset_test(435029);
 	printf("\n== bzero ==\n");
 	bzero_test();
+	printf("\n== memcpy ==\n");
+	memcpy_test();
 }
 
 void	memset_test(const int val)
 {
-	int				*a;
 	const t_size_t	size = 10 * sizeof(int);
+	int				*a;
 
 	printf("Testing for %i\n", val);
 	printf("Exp:\n");
@@ -75,8 +78,8 @@ void	memset_test(const int val)
 void	bzero_test(void)
 {
 	const int		val = 0;
-	int				*a;
 	const t_size_t	size = 10 * sizeof(int);
+	int				*a;
 
 	printf("Testing for %i\n", val);
 	printf("Exp:\n");
@@ -89,6 +92,29 @@ void	bzero_test(void)
 	ft_bzero(a, size);
 	display_memory(a, size);
 	free(a);
+}
+
+void	memcpy_test(void)
+{
+	const t_size_t	size = 10 * sizeof(int);
+	int				*src;
+	int				*dest;
+
+	printf("Exp:\n");
+	src = malloc(size);
+	dest = malloc(size);
+	memset(src, 42, size);
+	memcpy(dest, src, size);
+	display_memory(src, size);
+	display_memory(dest, size);
+	printf("Act:\n");
+	memset(src, 24, size);
+	ft_memcpy(dest, src, size);
+	display_memory(src, size);
+	display_memory(dest, size);
+	free(src);
+	free(dest);
+
 }
 
 int	int_tester(const int exp, const int res)
@@ -107,12 +133,20 @@ int	int_tester(const int exp, const int res)
 
 void	display_memory(void *ptr, t_size_t size)
 {
-	char *c_ptr;
-	t_size_t i;
+	char		*c_ptr;
+	t_size_t	i;
 
 	i = 0;
 	c_ptr = ptr;
-	while (i <= size)
+	while (i < size)
+	{
+		printf("%i ", *c_ptr);
+		i++;
+		c_ptr++;
+	}
+	printf(" |");
+	i = 0;
+	while (i < 3)
 	{
 		printf("%i ", *c_ptr);
 		i++;

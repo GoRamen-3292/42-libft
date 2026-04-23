@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 17:02:38 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 17:34:21 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,4 @@ int						ft_isprint(char c);
 void					*ft_memset(void *s, int c, t_size_t n);
 t_size_t				ft_strlen(char *str);
 void					ft_bzero(void *s, t_size_t n);
+void					*ft_memcpy(void *dest, const void *src, t_size_t n);
