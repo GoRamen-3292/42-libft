@@ -6,9 +6,12 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 17:34:21 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 19:51:09 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// External libraries for types
+#include "string.h"
 
 // Constants
 #define C_CLASS_MATCHED 1
@@ -27,3 +30,4 @@ void					*ft_memset(void *s, int c, t_size_t n);
 t_size_t				ft_strlen(char *str);
 void					ft_bzero(void *s, t_size_t n);
 void					*ft_memcpy(void *dest, const void *src, t_size_t n);
+size_t					ft_strlcpy(char *dst, const char *src, size_t size);

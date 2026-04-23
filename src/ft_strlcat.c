@@ -6,8 +6,19 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 18:42:54 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 18:43:46 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 20:47:20 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// int	ft_strlcat();
+#include "libft.h"
+
+// size_t	ft_strlcat(char *dst, const char *src, size_t size)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// 	while (i < size )
+// 	{
+
+// 	}
+// }

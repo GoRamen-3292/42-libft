@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 18:49:51 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 20:20:17 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,12 @@ int	main(void)
 	printf("\n== memmove ==\n");
 	printf("Not implemented yet..\n");
 	printf("\n== strlcpy ==\n");
+	strlcpy_test();
+	printf("\n== strlcat ==\n");
+	printf("Not implemented yet..\n");
+	printf("\n== toupper ==\n");
+	printf("Not implemented yet..\n");
+	printf("\n== toupper ==\n");
 }
 
 

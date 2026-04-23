@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <bsd/string.h>
 #include <strings.h>
 #include <unistd.h>
 
@@ -11,3 +12,4 @@ void	display_memory(void *ptr, t_size_t size);
 void	memset_test(int val);
 void	bzero_test(void);
 void	memcpy_test(void);
+void	strlcpy_test(void);
