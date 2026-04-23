@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 12:26:02 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 13:13:17 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 15:05:06 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
  */
 int	ft_isalnum(int c)
 {
-	if (('0' <= c && c <= '9') || ('a' < c && c < 'z') || ('A' < c && c < 'Z'))
+	if (('0' <= c && c <= '9') || ('a' <= c && c <= 'z') || ('A' <= c
+			&& c <= 'Z'))
 		return (C_CLASS_MATCHED);
 	else
 		return (C_CLASS_UNMATCHED);

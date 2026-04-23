@@ -6,18 +6,18 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:00:11 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 13:10:14 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 15:06:05 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+t_size_t	ft_strlen(char *str)
 {
-	size_t	len;
+	t_size_t	len;
 
 	len = 0;
-	while (str++ != '\0')
+	while (*(str++) != '\0')
 		len++;
 	return (len);
 }
