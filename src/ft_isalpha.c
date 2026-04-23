@@ -6,14 +6,16 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:47:01 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/22 19:48:57 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 12:41:43 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(const char c)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
 	if ('a' <= c && c <= 'a')
-		return (1);
+		return (C_CLASS_MATCHED);
 	else
-		return (0);
+		return (C_CLASS_UNMATCHED);
 }
