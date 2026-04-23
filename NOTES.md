@@ -6,3 +6,5 @@
 
 - https://www.man7.org/linux/man-pages/man3/isascii.3p.html
 - 
+
+## ft_memset
