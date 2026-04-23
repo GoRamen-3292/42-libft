@@ -6,23 +6,11 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 17:36:45 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 18:49:51 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "src/libft.h"
-#include <ctype.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <strings.h>
-#include <unistd.h>
-
-int		int_tester(const int exp, const int res);
-void	display_memory(void *ptr, t_size_t size);
-void	memset_test(int val);
-void	bzero_test(void);
-void	memcpy_test(void);
+#include "test.h"
 
 int	main(void)
 {
@@ -55,67 +43,11 @@ int	main(void)
 	bzero_test();
 	printf("\n== memcpy ==\n");
 	memcpy_test();
+	printf("\n== memmove ==\n");
+	printf("Not implemented yet..\n");
+	printf("\n== strlcpy ==\n");
 }
 
-void	memset_test(const int val)
-{
-	const t_size_t	size = 10 * sizeof(int);
-	int				*a;
-
-	printf("Testing for %i\n", val);
-	printf("Exp:\n");
-	a = malloc(size);
-	memset(a, val, size);
-	display_memory(a, size);
-	free(a);
-	printf("Act:\n");
-	a = malloc(size);
-	ft_memset(a, val, size);
-	display_memory(a, size);
-	free(a);
-}
-
-void	bzero_test(void)
-{
-	const int		val = 0;
-	const t_size_t	size = 10 * sizeof(int);
-	int				*a;
-
-	printf("Testing for %i\n", val);
-	printf("Exp:\n");
-	a = malloc(size);
-	bzero(a, size);
-	display_memory(a, size);
-	free(a);
-	printf("Act:\n");
-	a = malloc(size);
-	ft_bzero(a, size);
-	display_memory(a, size);
-	free(a);
-}
-
-void	memcpy_test(void)
-{
-	const t_size_t	size = 10 * sizeof(int);
-	int				*src;
-	int				*dest;
-
-	printf("Exp:\n");
-	src = malloc(size);
-	dest = malloc(size);
-	memset(src, 42, size);
-	memcpy(dest, src, size);
-	display_memory(src, size);
-	display_memory(dest, size);
-	printf("Act:\n");
-	memset(src, 24, size);
-	ft_memcpy(dest, src, size);
-	display_memory(src, size);
-	display_memory(dest, size);
-	free(src);
-	free(dest);
-
-}
 
 int	int_tester(const int exp, const int res)
 {
