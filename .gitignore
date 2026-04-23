@@ -1,6 +1,6 @@
 .DS_Store
-test*
-!test.c
+src/test*
+src/tmp*
 *.o
 a.out
-.gch
+*.gch
