@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 16:17:09 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/23 17:02:49 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <strings.h>
 #include <unistd.h>
 
 int		int_tester(const int exp, const int res);
 void	display_memory(void *ptr, t_size_t size);
 void	memset_test(int val);
+void	bzero_test(void);
 
 int	main(void)
 {
@@ -49,6 +51,7 @@ int	main(void)
 	memset_test(5029);
 	memset_test(435029);
 	printf("\n== bzero ==\n");
+	bzero_test();
 }
 
 void	memset_test(const int val)
@@ -69,20 +72,21 @@ void	memset_test(const int val)
 	free(a);
 }
 
-void	bzero_test(const int val)
+void	bzero_test(void)
 {
+	const int		val = 0;
 	int				*a;
 	const t_size_t	size = 10 * sizeof(int);
 
 	printf("Testing for %i\n", val);
 	printf("Exp:\n");
 	a = malloc(size);
-	bzero(100);
+	bzero(a, size);
 	display_memory(a, size);
 	free(a);
 	printf("Act:\n");
 	a = malloc(size);
-	ft_memset(a, val, size);
+	ft_bzero(a, size);
 	display_memory(a, size);
 	free(a);
 }
