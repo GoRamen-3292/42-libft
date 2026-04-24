@@ -16,3 +16,4 @@ void	strlcpy_test(void);
 void	strlcat_test(void);
 void	strchr_test(void);
 void	strrchr_test(void);
+void	strncmp_test(void);

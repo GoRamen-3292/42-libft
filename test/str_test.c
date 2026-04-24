@@ -61,3 +61,17 @@ void	strrchr_test(void)
 	printf("Exp: %s\nAct: %s\n", exp_result, act_result);
 	printf("Exp: NULL\nAct: %s\n", act_nul_result);
 }
+
+void	strncmp_test(void)
+{
+	const char	*s1 = "This is 42";
+	const char	*s2 = "This is 24";
+
+	int_tester(strncmp(s1, s2, 7), ft_strncmp(s1, s2, 7));
+	int_tester(strncmp(s1, s2, 11), ft_strncmp(s1, s2, 11));
+	int_tester(strncmp(s1, s2, 42), ft_strncmp(s1, s2, 42));
+
+	const char	*s3 = "This is 42!!";
+	int_tester(strncmp(s1, s3, 7), ft_strncmp(s1, s3, 7));
+	int_tester(strncmp(s1, s3, 13), ft_strncmp(s1, s3, 13));
+}

@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 11:32:38 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 11:44:50 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ int	main(void)
 	strchr_test();
 	printf("\n== strrchr ==\n");
 	strrchr_test();
+	printf("\n== strncmp ==\n");
+	strncmp_test();
 }
 
 
