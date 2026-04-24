@@ -6,14 +6,12 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 11:35:50 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 11:50:21 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 11:54:05 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// TODO: DELETE THIS
-#include <stdio.h>
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
