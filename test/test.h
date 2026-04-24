@@ -13,6 +13,7 @@ void	display_memory(void *ptr, t_size_t size);
 void	memset_test(int val);
 void	bzero_test(void);
 void	memcpy_test(void);
+void	memmove_test(void);
 void	strlcpy_test(void);
 void	strlcat_test(void);
 void	strchr_test(void);

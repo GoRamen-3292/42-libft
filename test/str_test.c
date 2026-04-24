@@ -17,8 +17,8 @@ void	strlcpy_test(void)
 	display_memory(dest, size);
 
 	char dest_2[12] = "__________";
-	printf("Act:\n");
-	printf("\n\n%s | %s\n", src, dest_2);
+	printf("\nAct:\n");
+	printf("%s | %s\n", src, dest_2);
 	strlcpy(dest_2, src, 0);
 	printf("%s | %s\n", src, dest_2);
 	strlcpy(dest_2, src, 2);

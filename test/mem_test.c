@@ -18,6 +18,21 @@ void	memset_test(const int val)
 	free(a);
 }
 
+void	memmove_test(void)
+{
+	char	str_1[1000] = "42_________________________________________";
+	char	str_2[1000] = "__________42_____________________________";
+	const int	offset = 10;
+
+	printf("Before: %s\n", str_1);
+	printf("Result: %s\n", (char *) ft_memmove(&str_1[offset], str_1, 2));
+	printf("After: %s\n", str_1);
+
+	printf("Before: %s\n", &str_2[offset]);
+	printf("Result: %s\n", (char *) ft_memmove(str_2, &str_2[offset], 2));
+	printf("After: %s\n", str_2);
+}
+
 void	bzero_test(void)
 {
 	const int		val = 0;
@@ -73,14 +88,13 @@ void	memchr_test(void)
 
 void	memcmp_test(void)
 {
-	const char s1[50] = "This is 42";
-	const char s2[50] = "This is 24";
+	const char	s1[50] = "This is 42";
+	const char	s2[50] = "This is 24";
+	const char	s3[50] = "This is 42!!";
 
 	int_tester(memcmp(s1, s2, 7), ft_memcmp(s1, s2, 7));
 	int_tester(memcmp(s1, s2, 11), ft_memcmp(s1, s2, 11));
 	int_tester(memcmp(s1, s2, 42), ft_memcmp(s1, s2, 42));
-
-	const char s3[50] = "This is 42!!";
 	int_tester(memcmp(s1, s3, 7), ft_memcmp(s1, s3, 7));
 	int_tester(memcmp(s1, s3, 13), ft_memcmp(s1, s3, 13));
 }
