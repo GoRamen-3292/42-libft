@@ -6,12 +6,13 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 13:40:17 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 17:24:07 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // External libraries for types
-#include "string.h"
+#include <string.h>
+#include <limits.h>
 
 // Constants
 #define C_CLASS_MATCHED 1

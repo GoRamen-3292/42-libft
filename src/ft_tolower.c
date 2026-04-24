@@ -6,13 +6,13 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 15:47:41 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 15:52:52 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 18:00:52 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	tolower(int c)
 {
-	if ('a' < c && c < 'z')
+	if ('A' <= c && c <= 'Z')
 		return (c - 'A' + 'a');
 	else
 		return (c);

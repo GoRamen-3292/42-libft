@@ -6,13 +6,13 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 15:47:41 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 15:52:55 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 17:59:22 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	toupper(int c)
 {
-	if ('a' < c && c < 'z')
+	if ('a' <= c && c <= 'z')
 		return (c - 'a' + 'A');
 	else
 		return (c);

@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 15:11:11 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 18:47:04 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,9 +75,29 @@ int	main(void)
 	atoi_test("-1");
 	atoi_test("2147483647");
 	atoi_test("-2147483648");
-	atoi_test("2147483648"); // Overflow
-	atoi_test("--2147483648");
+	atoi_test("+2147483647");
+	atoi_test(" 	 -2147483648");
+	atoi_test(" 	 -2147483648");
+	atoi_test("		-2147483648");
+	printf("Error\n");
+	atoi_test("---2147483648");
 	atoi_test("_2147483648");
+	printf("Overflow Testing... ");
+	ft_atoi("2147483648"); // Overflow
+	ft_atoi(" 214747543059841356974580237853645987612865471846987358792654183648"); // Overflow
+	printf("OK!\n");
+	printf("\n== toupper ==\n");
+	int_tester('A', toupper('a'));
+	int_tester('K', toupper('k'));
+	int_tester('Z', toupper('z'));
+	int_tester('A', toupper('A'));
+	int_tester(' ', toupper(' '));
+	printf("\n== tolower ==\n");
+	int_tester('a', tolower('A'));
+	int_tester('k', tolower('K'));
+	int_tester('z', tolower('Z'));
+	int_tester('a', tolower('a'));
+	int_tester(' ', tolower(' '));
 }
 
 int	int_tester(const int exp, const int res)
