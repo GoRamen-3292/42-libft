@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 13:38:51 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 15:11:11 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,19 @@ int	main(void)
 	memcmp_test();
 	printf("\n== strnstr ==\n");
 	strnstr_test();
+	printf("\n== atoi ==\n");
+	atoi_test("0");
+	atoi_test("00000");
+	atoi_test("1");
+	atoi_test("42");
+	atoi_test("00042");
+	atoi_test("4242");
+	atoi_test("-1");
+	atoi_test("2147483647");
+	atoi_test("-2147483648");
+	atoi_test("2147483648"); // Overflow
+	atoi_test("--2147483648");
+	atoi_test("_2147483648");
 }
 
 int	int_tester(const int exp, const int res)
