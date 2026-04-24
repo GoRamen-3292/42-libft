@@ -6,13 +6,13 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:00:11 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 20:47:51 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 10:36:14 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size_t	ft_strlen(char *str)
+t_size_t	ft_strlen(const char *str)
 {
 	t_size_t	len;
 
