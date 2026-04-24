@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 12:10:10 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 12:18:11 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 15:52:45 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const char	*c_s1 = (char *)s1;
 	const char	*c_s2 = (char *)s2;
-	size_t i;
+	size_t		i;
 
 	i = 0;
 	while (c_s1[i] == c_s2[i] && i < n)
