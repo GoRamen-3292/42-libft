@@ -1,9 +1,9 @@
 #include "../src/libft.h"
+#include <bsd/string.h>
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <bsd/string.h>
 #include <strings.h>
 #include <unistd.h>
 
@@ -17,3 +17,7 @@ void	strlcat_test(void);
 void	strchr_test(void);
 void	strrchr_test(void);
 void	strncmp_test(void);
+void	memchr_test(void);
+void	memcmp_test(void);
+void	strnstr_test(void);
+int		ptr_tester(const void *exp, const void *res, int output_as_str);

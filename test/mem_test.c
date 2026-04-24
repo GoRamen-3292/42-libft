@@ -57,5 +57,30 @@ void	memcpy_test(void)
 	display_memory(dest, size);
 	free(src);
 	free(dest);
+}
 
+void	memchr_test(void)
+{
+	const char		*str = "This is 42!";
+	const size_t	size = strlen(str) + 1;
+	const char		*exp_result = memchr(str, 's', size);
+	const char		*act_result = ft_memchr(str, 's', size);
+	const char		*act_nul_result = ft_memchr(str, 'z', size);
+
+	ptr_tester(exp_result, act_result, 1);
+	ptr_tester(NULL, act_nul_result, 0);
+}
+
+void	memcmp_test(void)
+{
+	const char s1[50] = "This is 42";
+	const char s2[50] = "This is 24";
+
+	int_tester(memcmp(s1, s2, 7), ft_memcmp(s1, s2, 7));
+	int_tester(memcmp(s1, s2, 11), ft_memcmp(s1, s2, 11));
+	int_tester(memcmp(s1, s2, 42), ft_memcmp(s1, s2, 42));
+
+	const char s3[50] = "This is 42!!";
+	int_tester(memcmp(s1, s3, 7), ft_memcmp(s1, s3, 7));
+	int_tester(memcmp(s1, s3, 13), ft_memcmp(s1, s3, 13));
 }

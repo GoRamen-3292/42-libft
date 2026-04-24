@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 11:44:50 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 13:38:51 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,13 @@ int	main(void)
 	strrchr_test();
 	printf("\n== strncmp ==\n");
 	strncmp_test();
+	printf("\n== memchr ==\n");
+	memchr_test();
+	printf("\n== memcmp ==\n");
+	memcmp_test();
+	printf("\n== strnstr ==\n");
+	strnstr_test();
 }
-
 
 int	int_tester(const int exp, const int res)
 {
@@ -71,11 +76,21 @@ int	int_tester(const int exp, const int res)
 	}
 	else
 	{
-		printf("%i (exp: %i), Diff...\n", res, exp);
+		printf("%i (exp: %i), Diff... ///\n", res, exp);
 		return (1);
 	}
 }
 
+int	ptr_tester(const void *exp, const void *res, int output_as_str)
+{
+	if (exp == res)
+		printf("%p (exp: %p), OK!\n", res, exp);
+	else
+		printf("%p (exp: %p), Diff... ///\n", res, exp);
+	if (output_as_str)
+		printf("-> %s (exp: %s)\n", (char *)res, (char *)exp);
+	return (exp == res);
+}
 void	display_memory(void *ptr, t_size_t size)
 {
 	char		*c_ptr;

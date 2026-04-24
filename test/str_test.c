@@ -47,8 +47,8 @@ void	strchr_test(void)
 	const char	*act_result = ft_strchr(str, 's');
 	const char	*act_nul_result = ft_strchr(str, 'z');
 
-	printf("Exp: %s\nAct: %s\n", exp_result, act_result);
-	printf("Exp: NULL\nAct: %s\n", act_nul_result);
+	ptr_tester(exp_result, act_result, 1);
+	ptr_tester(NULL, act_nul_result, 0);
 }
 
 void	strrchr_test(void)
@@ -58,8 +58,8 @@ void	strrchr_test(void)
 	const char	*act_result = ft_strrchr(str, 's');
 	const char	*act_nul_result = ft_strrchr(str, 'z');
 
-	printf("Exp: %s\nAct: %s\n", exp_result, act_result);
-	printf("Exp: NULL\nAct: %s\n", act_nul_result);
+	ptr_tester(exp_result, act_result, 1);
+	ptr_tester(NULL, act_nul_result, 0);
 }
 
 void	strncmp_test(void)
@@ -74,4 +74,12 @@ void	strncmp_test(void)
 	const char	*s3 = "This is 42!!";
 	int_tester(strncmp(s1, s3, 7), ft_strncmp(s1, s3, 7));
 	int_tester(strncmp(s1, s3, 13), ft_strncmp(s1, s3, 13));
+}
+
+void	strnstr_test(void)
+{
+	const char	*big = "I really really really really like 42";
+	const char	*small = "really";
+
+	ptr_tester(strnstr(big, small, 38), ft_strnstr(big, small, 38), 1);
 }
