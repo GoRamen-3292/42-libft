@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 19:15:14 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 19:39:23 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,33 @@ int	main(void)
 	printf("Testing the libft...\n");
 	printf("== isalpha ==\n");
 	int_tester(C_CLASS_MATCHED, ft_isalpha('c'));
+	int_tester(C_CLASS_MATCHED, ft_isalpha('a'));
+	int_tester(C_CLASS_MATCHED, ft_isalpha('z'));
 	int_tester(C_CLASS_MATCHED, ft_isalpha('A'));
+	int_tester(C_CLASS_MATCHED, ft_isalpha('Z'));
 	int_tester(C_CLASS_UNMATCHED, ft_isalpha('0'));
 	printf("\n== isdigit ==\n");
 	int_tester(C_CLASS_UNMATCHED, ft_isdigit('c'));
 	int_tester(C_CLASS_UNMATCHED, ft_isdigit('A'));
 	int_tester(C_CLASS_MATCHED, ft_isdigit('0'));
+	int_tester(C_CLASS_MATCHED, ft_isdigit('5'));
+	int_tester(C_CLASS_MATCHED, ft_isdigit('9'));
 	printf("\n== isascii ==\n");
 	int_tester(isascii('0'), ft_isascii('0'));
+	int_tester(isascii('Z'), ft_isascii('Z'));
 	int_tester(isascii('A'), ft_isascii('A'));
 	int_tester(isascii('0'), ft_isascii('0'));
 	printf("\n== isalnum ==\n");
 	int_tester(C_CLASS_MATCHED, ft_isalnum('c'));
+	int_tester(C_CLASS_MATCHED, ft_isalnum('a'));
+	int_tester(C_CLASS_MATCHED, ft_isalnum('d'));
+	int_tester(C_CLASS_MATCHED, ft_isalnum('z'));
 	int_tester(C_CLASS_MATCHED, ft_isalnum('A'));
+	int_tester(C_CLASS_MATCHED, ft_isalnum('C'));
+	int_tester(C_CLASS_MATCHED, ft_isalnum('Z'));
 	int_tester(C_CLASS_MATCHED, ft_isalnum('0'));
+	int_tester(C_CLASS_MATCHED, ft_isalnum('5'));
+	int_tester(C_CLASS_MATCHED, ft_isalnum('9'));
 	int_tester(C_CLASS_UNMATCHED, ft_isalnum('-'));
 	printf("\n== strlen ==\n");
 	int_tester(strlen("aaaaa"), ft_strlen("aaaaa"));

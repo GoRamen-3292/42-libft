@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 18:50:26 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 19:39:53 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,4 @@ int						ft_memcmp(const void *s1, const void *s2, size_t n);
 char					*ft_strnstr(const char *big, const char *little,
 							size_t len);
 int						ft_atoi(const char *src);
+void					*ft_calloc(size_t nmemb, size_t size);

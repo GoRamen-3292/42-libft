@@ -6,14 +6,14 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 19:32:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 19:35:33 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 19:40:13 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t nmemb, size_t size)
-{
-	if (size_t )
-	malloc(nmemb * size);
-}
+// void	*ft_calloc(size_t nmemb, size_t size)
+// {
+	// if (size_t )
+	// malloc(nmemb * size);
+// }
