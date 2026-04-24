@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 18:42:54 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 10:05:21 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 11:13:04 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,21 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
+	const size_t src_size = ft_strlen(src);
+	size_t i;
+	size_t offset;
 
 	i = 0;
-	while (i < size)
+	while (dst[i] != '\0' && i < size - 1)
 	{
-
+		i++;
 	}
+	offset = i;
+	while (src[i - offset] != '\0' && i < size - 1)
+	{
+		dst[i] = src[i - offset];
+		i++;
+	}
+	dst[i] = '\0';
+	return (src_size);
 }

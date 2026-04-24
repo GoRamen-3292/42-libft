@@ -28,3 +28,36 @@ void	strlcpy_test(void)
 	printf("%s | %s ->", src, dest_2);
 	display_memory(dest_2, size);
 }
+
+void	strlcat_test(void)
+{
+	char	dest[30] = "This is ";
+	const char	src[3] = "42";
+	const size_t size = 20;
+
+	ft_strlcat(dest, src, size);
+	printf("%s\n", dest);
+	display_memory(dest, size);
+}
+
+void	strchr_test(void)
+{
+	const char	*str = "This is 42!";
+	const char	*exp_result = strchr(str, 's');
+	const char	*act_result = ft_strchr(str, 's');
+	const char	*act_nul_result = ft_strchr(str, 'z');
+
+	printf("Exp: %s\nAct: %s\n", exp_result, act_result);
+	printf("Exp: NULL\nAct: %s\n", act_nul_result);
+}
+
+void	strrchr_test(void)
+{
+	const char	*str = "This is 42!";
+	const char	*exp_result = strrchr(str, 's');
+	const char	*act_result = ft_strrchr(str, 's');
+	const char	*act_nul_result = ft_strrchr(str, 'z');
+
+	printf("Exp: %s\nAct: %s\n", exp_result, act_result);
+	printf("Exp: NULL\nAct: %s\n", act_nul_result);
+}

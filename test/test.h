@@ -13,3 +13,6 @@ void	memset_test(int val);
 void	bzero_test(void);
 void	memcpy_test(void);
 void	strlcpy_test(void);
+void	strlcat_test(void);
+void	strchr_test(void);
+void	strrchr_test(void);

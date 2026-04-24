@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 20:20:17 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 11:32:38 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,15 @@ int	main(void)
 	printf("\n== strlcpy ==\n");
 	strlcpy_test();
 	printf("\n== strlcat ==\n");
-	printf("Not implemented yet..\n");
+	strlcat_test();
 	printf("\n== toupper ==\n");
 	printf("Not implemented yet..\n");
 	printf("\n== toupper ==\n");
+	printf("Not implemented yet..\n");
+	printf("\n== strchr ==\n");
+	strchr_test();
+	printf("\n== strrchr ==\n");
+	strrchr_test();
 }
 
 
@@ -84,11 +89,11 @@ void	display_memory(void *ptr, t_size_t size)
 	}
 	printf(" |");
 	i = 0;
-	while (i < 3)
-	{
-		printf("%i ", *c_ptr);
-		i++;
-		c_ptr++;
-	}
+	// while (i < 3)
+	// {
+	// 	printf("%i ", *c_ptr);
+	// 	i++;
+	// 	c_ptr++;
+	// }
 	printf("\n");
 }

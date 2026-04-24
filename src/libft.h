@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/23 19:51:09 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/24 11:31:36 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,6 @@ t_size_t				ft_strlen(const char *str);
 void					ft_bzero(void *s, t_size_t n);
 void					*ft_memcpy(void *dest, const void *src, t_size_t n);
 size_t					ft_strlcpy(char *dst, const char *src, size_t size);
+size_t					ft_strlcat(char *dst, const char *src, size_t size);
+char					*ft_strchr(const char *str, int c);
+char					*ft_strrchr(const char *str, int c);
