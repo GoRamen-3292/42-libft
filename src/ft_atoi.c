@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 13:39:39 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 18:47:35 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 13:05:39 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *src)
 static int	isspace(const char c)
 {
 	if (('\t' <= c && c <= '\r') || c == ' ')
-		return (1);
+		return (TRUE);
 	else
-		return (0);
+		return (FALSE);
 }
