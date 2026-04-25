@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 11:03:38 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 11:54:41 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:11:50 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strrchr(const char *str, int c)
 	result = NULL;
 	while (str[i] != '\0')
 	{
-		i++;
 		if (str[i] == c)
 			result = (char *)&str[i];
+		i++;
 	}
 	return (result);
 }
