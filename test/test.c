@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 10:31:00 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 11:40:11 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(void)
 {
 	printf("Testing the libft...\n");
+	printf("###### Part 1. libc ######\n");
 	printf("== isalpha ==\n");
 	int_tester(C_CLASS_MATCHED, ft_isalpha('c'));
 	int_tester(C_CLASS_MATCHED, ft_isalpha('a'));
@@ -109,6 +110,14 @@ int	main(void)
 	int_tester(' ', tolower(' '));
 	printf("\n=== calloc ===\n");
 	calloc_test();
+	printf("###### Part 2. 42 func ######\n");
+	printf("\n=== ft_substr ===\n");
+	substr_test("1234567890", 0, 0);
+	substr_test("1234567890", 0, 3);
+	substr_test("1234567890", 2, 3);
+	substr_test("1234567890", 2, 7);
+	substr_test("1234567890", 2, 8);
+	substr_test("1234567890", 2, 10000);
 }
 
 int	int_tester(const int exp, const int res)

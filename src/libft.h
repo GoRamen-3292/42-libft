@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 10:56:57 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 11:19:21 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 typedef unsigned long	t_size_t;
 
 // Prototypes
+// - Part 1.
 int						ft_isalnum(int c);
 int						ft_isalpha(int c);
 int						ft_isascii(int c);
@@ -45,3 +46,6 @@ char					*ft_strnstr(const char *big, const char *little,
 int						ft_atoi(const char *src);
 void					*ft_calloc(size_t nmemb, size_t size);
 char					*ft_strdup(const char *s1);
+
+// - Part 2.
+char	*ft_substr(const char *s, unsigned int start, size_t len);

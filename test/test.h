@@ -24,3 +24,5 @@ void	memcmp_test(void);
 void	strnstr_test(void);
 int		ptr_tester(const void *exp, const void *res, int output_as_str);
 int		atoi_test(char *n_str);
+
+void	substr_test(char *str, unsigned int start, size_t max_len);
