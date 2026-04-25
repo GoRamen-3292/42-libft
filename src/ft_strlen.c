@@ -6,15 +6,15 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:00:11 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 10:36:14 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:50:20 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	t_size_t	len;
+	size_t	len;
 
 	len = 0;
 	while (*(str++) != '\0')

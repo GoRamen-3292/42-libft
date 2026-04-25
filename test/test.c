@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 14:37:02 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:50:20 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,10 +152,10 @@ int	ptr_tester(const void *exp, const void *res, int output_as_str)
 		printf("-> %s (exp: %s)\n", (char *)res, (char *)exp);
 	return (exp == res);
 }
-void	display_memory(void *ptr, t_size_t size)
+void	display_memory(void *ptr, size_t size)
 {
 	char		*c_ptr;
-	t_size_t	i;
+	size_t	i;
 
 	i = 0;
 	c_ptr = ptr;

@@ -6,13 +6,13 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:52:26 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 11:52:48 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:50:20 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, t_size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

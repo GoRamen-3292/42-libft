@@ -9,8 +9,8 @@
 #include <unistd.h>
 
 int		int_tester(const int exp, const int res);
-void	display_memory(void *ptr, t_size_t size);
-void	memset_test(const t_size_t size, int val);
+void	display_memory(void *ptr, size_t size);
+void	memset_test(const size_t size, int val);
 void	bzero_test(void);
 void	memcpy_test(void);
 void	memmove_test(void);

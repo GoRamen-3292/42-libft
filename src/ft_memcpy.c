@@ -6,13 +6,13 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:04:59 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 11:53:06 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:50:20 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, t_size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	const char	*c_src = src;
 	const char	*last = dest + n - 1;

@@ -1,6 +1,6 @@
 #include "test.h"
 
-void	memset_test(const t_size_t size, int val)
+void	memset_test(const size_t size, int val)
 {
 	char				*a;
 
@@ -33,7 +33,7 @@ void	memmove_test(void)
 
 void	bzero_test(void)
 {
-	const t_size_t	size = 10 * sizeof(int);
+	const size_t	size = 10 * sizeof(int);
 	int				*a;
 
 	printf("Exp:\n");
@@ -50,7 +50,7 @@ void	bzero_test(void)
 
 void	memcpy_test(void)
 {
-	const t_size_t	size = 10 * sizeof(int);
+	const size_t	size = 10 * sizeof(int);
 	int				*src;
 	int				*dest;
 
