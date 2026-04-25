@@ -6,14 +6,37 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 11:52:31 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 11:53:18 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:14:58 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strtrim(const char *s1, const char *set)
+#include "libft.h"
+
+char	*ft_strtrim(const char *s1, const char *set)
 {
-  // Count occurance
-  // malloc - NULl check
-  // Copy
-  // Return 
+	size_t	s1_len;
+	size_t	matched_chs;
+	size_t	i;
+	size_t	rj;
+	char	*result;
+
+	i = 0;
+	matched_chs = 0;
+	while (s1[i] != '\0')
+		if (ft_strrchr(set, s1[i++]) != NULL)
+			matched_chs++;
+	s1_len = i;
+	result = malloc(sizeof(char) * (s1_len - matched_chs + 1));
+	if (result == NULL)
+		return (NULL);
+	i = 0;
+	rj = 0;
+	while (s1[i] != '\0')
+	{
+		if (ft_strrchr(set, s1[i]) == NULL)
+			result[rj++] = s1[i];
+		i++;
+	}
+	result[rj] = '\0';
+	return (result);
 }

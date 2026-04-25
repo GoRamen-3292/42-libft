@@ -56,9 +56,12 @@ void	strrchr_test(void)
 	const char	*str = "This is 42!";
 	const char	*exp_result = strrchr(str, 's');
 	const char	*act_result = ft_strrchr(str, 's');
+	const char	*exp2_result = strrchr(str, '2');
+	const char	*act2_result = ft_strrchr(str, '2');
 	const char	*act_nul_result = ft_strrchr(str, 'z');
 
 	ptr_tester(exp_result, act_result, 1);
+	ptr_tester(exp2_result, act2_result, 1);
 	ptr_tester(NULL, act_nul_result, 0);
 }
 

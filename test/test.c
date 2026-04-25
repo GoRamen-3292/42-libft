@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 11:53:30 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:16:55 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,7 +121,7 @@ int	main(void)
 	printf("\n=== ft_strjoin ===\n");
 	printf("Not tested yet...\n");
 	printf("\n=== ft_strtrim ===\n");
-	printf("Not tested yet...\n");
+	strtrim_test("Tuuuuhis iuuuuus 42uuuuuuu", "up$");
 }
 
 int	int_tester(const int exp, const int res)

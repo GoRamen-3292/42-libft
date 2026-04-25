@@ -27,3 +27,4 @@ int		atoi_test(char *n_str);
 void	calloc_test(void);
 
 void	substr_test(char *str, unsigned int start, size_t max_len);
+void	strtrim_test(const char *s1, const char *set);
