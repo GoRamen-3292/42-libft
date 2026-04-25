@@ -6,14 +6,14 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 10:49:24 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 10:56:57 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // External libraries for types, malloc() and free()
 #include <limits.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Constants
 #define C_CLASS_MATCHED 1
@@ -44,3 +44,4 @@ char					*ft_strnstr(const char *big, const char *little,
 							size_t len);
 int						ft_atoi(const char *src);
 void					*ft_calloc(size_t nmemb, size_t size);
+char					*ft_strdup(const char *s1);
