@@ -97,26 +97,3 @@ void	memcmp_test(void)
 	int_tester(memcmp(s1, s3, 7), ft_memcmp(s1, s3, 7));
 	int_tester(memcmp(s1, s3, 13), ft_memcmp(s1, s3, 13));
 }
-
-void	calloc_test(void)
-{
-	const size_t	count = 5;
-	const size_t	size = 4;
-	char *exp_ptr = calloc(count, size);
-	char *act_ptr = ft_calloc(count, size);
-	size_t i;
-
-	i = 0;
-	while (i < count * size - 1)
-	{
-		exp_ptr[i] = '_';
-		act_ptr[i] = '_';
-		i++;
-	}
-	exp_ptr[i] = '\0';
-	act_ptr[i] = '\0';
-	printf("exp: %s\n", exp_ptr);
-	printf("act: %s\n", act_ptr);
-	free(exp_ptr);
-	free(act_ptr);
-}
