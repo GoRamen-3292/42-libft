@@ -1,9 +1,8 @@
 #include "test.h"
 
-void	memset_test(const int val)
+void	memset_test(const t_size_t size, int val)
 {
-	const t_size_t	size = 10 * sizeof(int);
-	int				*a;
+	char				*a;
 
 	printf("Testing for %i\n", val);
 	printf("Exp:\n");
@@ -34,11 +33,9 @@ void	memmove_test(void)
 
 void	bzero_test(void)
 {
-	const int		val = 0;
 	const t_size_t	size = 10 * sizeof(int);
 	int				*a;
 
-	printf("Testing for %i\n", val);
 	printf("Exp:\n");
 	a = malloc(size);
 	bzero(a, size);

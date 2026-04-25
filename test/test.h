@@ -10,7 +10,7 @@
 
 int		int_tester(const int exp, const int res);
 void	display_memory(void *ptr, t_size_t size);
-void	memset_test(int val);
+void	memset_test(const t_size_t size, int val);
 void	bzero_test(void);
 void	memcpy_test(void);
 void	memmove_test(void);
@@ -27,4 +27,5 @@ int		atoi_test(char *n_str);
 void	calloc_test(void);
 
 void	substr_test(char *str, unsigned int start, size_t max_len);
+void	strjoin_test(const char *s1, const char *s2);
 void	strtrim_test(const char *s1, const char *set);

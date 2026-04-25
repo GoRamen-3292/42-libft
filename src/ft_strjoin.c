@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 11:45:51 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 12:57:54 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:38:40 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		result[i] = s1[i];
 		i++;
 	}
-	while (i < s2_len)
+	while (i - s1_len < s2_len)
 	{
 		result[i] = s2[i - s1_len];
 		i++;

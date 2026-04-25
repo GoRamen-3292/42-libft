@@ -13,3 +13,10 @@ void	strtrim_test(const char *s1, const char *set)
 	printf("%s, set: %s\n%s\n", s1, set, result);
 	free(result);
 }
+
+void	strjoin_test(const char *s1, const char *s2)
+{
+	char	*result = ft_strjoin(s1, s2);
+	printf("\"%s\" + \"%s\" = \"%s\"\n", s1, s2, result);
+	free(result);
+}

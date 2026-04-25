@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 14:16:55 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:37:02 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,10 @@ int	main(void)
 	int_tester(strlen("aaaaa"), ft_strlen("aaaaa"));
 	int_tester(strlen(""), ft_strlen(""));
 	printf("\n== memset ==\n");
-	memset_test(2);
-	memset_test(5029);
-	memset_test(435029);
+	memset_test(40, 2);
+	memset_test(40, 5029);
+	memset_test(40, 435029);
+	memset_test(0, 435029);
 	printf("\n== bzero ==\n");
 	bzero_test();
 	printf("\n== memcpy ==\n");
@@ -110,7 +111,7 @@ int	main(void)
 	int_tester(' ', tolower(' '));
 	printf("\n=== calloc ===\n");
 	calloc_test();
-	printf("###### Part 2. 42 func ######\n");
+	printf("\n\n###### Part 2. 42 func ######\n");
 	printf("\n=== ft_substr ===\n");
 	substr_test("1234567890", 0, 0);
 	substr_test("1234567890", 0, 3);
@@ -119,9 +120,12 @@ int	main(void)
 	substr_test("1234567890", 2, 8);
 	substr_test("1234567890", 2, 10000);
 	printf("\n=== ft_strjoin ===\n");
-	printf("Not tested yet...\n");
+	strjoin_test("aaaaa", "bbbbb");
+	strjoin_test("", "bbbbb");
 	printf("\n=== ft_strtrim ===\n");
 	strtrim_test("Tuuuuhis iuuuuus 42uuuuuuu", "up$");
+	strtrim_test("This is 42u", " ");
+	strtrim_test("This\b\t is \v42u", "\b\t\v ");
 }
 
 int	int_tester(const int exp, const int res)
