@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 19:39:23 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 10:31:00 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,8 @@ int	main(void)
 	int_tester('z', tolower('Z'));
 	int_tester('a', tolower('a'));
 	int_tester(' ', tolower(' '));
+	printf("\n=== calloc ===\n");
+	calloc_test();
 }
 
 int	int_tester(const int exp, const int res)

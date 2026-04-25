@@ -6,13 +6,14 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 19:39:53 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 10:49:24 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// External libraries for types
+// External libraries for types, malloc() and free()
 #include <limits.h>
 #include <string.h>
+#include <stdlib.h>
 
 // Constants
 #define C_CLASS_MATCHED 1
