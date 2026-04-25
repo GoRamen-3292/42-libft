@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 11:19:21 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 11:53:24 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,6 @@ void					*ft_calloc(size_t nmemb, size_t size);
 char					*ft_strdup(const char *s1);
 
 // - Part 2.
-char	*ft_substr(const char *s, unsigned int start, size_t len);
+char					*ft_substr(const char *s, unsigned int start,
+							size_t len);
+int						ft_strjoin(const char *s1, const char *s2);
