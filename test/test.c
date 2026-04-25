@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 14:50:20 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 18:09:31 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,8 @@ int	main(void)
 	int_tester('a', tolower('a'));
 	int_tester(' ', tolower(' '));
 	printf("\n=== calloc ===\n");
-	calloc_test();
+	calloc_test(5, 4);
+	calloc_test(0, 0);
 	printf("\n\n###### Part 2. 42 func ######\n");
 	printf("\n=== ft_substr ===\n");
 	substr_test("1234567890", 0, 0);

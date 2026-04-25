@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 13:40:55 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 11:17:26 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 20:24:25 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,39 @@ int	atoi_test(char *n_str)
 	return (int_tester(atoi(n_str), ft_atoi(n_str)));
 }
 
-void	calloc_test(void)
+void	calloc_test(const size_t count, const size_t size)
 {
-	const size_t	count = 5;
-	const size_t	size = 4;
-	char *exp_ptr = calloc(count, size);
-	char *act_ptr = ft_calloc(count, size);
-	size_t i;
+	char	*exp_ptr;
+	char	*act_ptr;
+	size_t	i;
 
+	exp_ptr = calloc(count, size);
+	act_ptr = ft_calloc(count, size);
 	i = 0;
-	while (i < count * size - 1)
+	
+	if (count * size > 0)
+	{
+		exp_ptr[i] = '\0';
+		act_ptr[i] = '\0';
+		printf("exp: ");
+		display_memory(exp_ptr, count * size);
+		printf("\nact: ");
+		display_memory(act_ptr, count * size);
+		printf("\n");
+	}
+	else
+	{
+		printf("0: %p\n", act_ptr);
+		printf("Didn't crash when count * size == 0");
+		fflush(stdout);
+	}
+	// ちゃんと確保した領域が読み書きできるか、一旦試しに埋めてvalgrind等で確認する
+	while (i < count * size)
 	{
 		exp_ptr[i] = '_';
 		act_ptr[i] = '_';
 		i++;
 	}
-	exp_ptr[i] = '\0';
-	act_ptr[i] = '\0';
-	printf("exp: %s\n", exp_ptr);
-	printf("act: %s\n", act_ptr);
 	free(exp_ptr);
 	free(act_ptr);
 }
-

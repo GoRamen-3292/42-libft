@@ -24,7 +24,7 @@ void	memcmp_test(void);
 void	strnstr_test(void);
 int		ptr_tester(const void *exp, const void *res, int output_as_str);
 int		atoi_test(char *n_str);
-void	calloc_test(void);
+void	calloc_test(const size_t count, const size_t size);
 
 void	substr_test(char *str, unsigned int start, size_t max_len);
 void	strjoin_test(const char *s1, const char *s2);
