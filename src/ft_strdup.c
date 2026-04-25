@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 10:50:35 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 10:57:14 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 12:55:21 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	size_t			i;
 
 	i = 0;
-	malloc(s1_size);
+	ptr = malloc(s1_size);
 	if (ptr == NULL)
 		return (NULL);
 	while (i < s1_size)

@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 11:53:24 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 12:58:29 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,4 @@ char					*ft_strdup(const char *s1);
 // - Part 2.
 char					*ft_substr(const char *s, unsigned int start,
 							size_t len);
-int						ft_strjoin(const char *s1, const char *s2);
+char					*ft_strjoin(const char *s1, const char *s2);

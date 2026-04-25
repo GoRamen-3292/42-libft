@@ -6,19 +6,19 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 11:45:51 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 11:50:20 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/25 12:57:54 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	const size_t	s1_len = ft_strlen(s1);
 	const size_t	s2_len = ft_strlen(s2);
 	char			*result;
 	size_t			i;
-	
+
 	result = malloc((s1_len + s2_len + 1) * sizeof(char));
 	if (result == NULL)
 		return (NULL);
