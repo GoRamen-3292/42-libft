@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 14:42:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 20:23:25 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 11:38:45 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static char	**store_arrays(const char *s, const char c, char **result,
 {
 	size_t	ri;
 	size_t	sj;
-	size_t	chars;
 	size_t	start;
 
 	ri = 0;
@@ -47,14 +46,11 @@ static char	**store_arrays(const char *s, const char c, char **result,
 		start = sj;
 		while (s[sj] != c && s[sj] != '\0')
 			sj++;
-		chars = sj - start;
+		result[ri] = malloc(sizeof(char) * sj - start + 1);
 		sj = start;
-		result[ri] = malloc(sizeof(char) * chars + 1);
-		// TODO: NULLの処理を書く
-		while (chars > 0)
+		while (s[sj] != c && s[sj] != '\0')
 		{
 			result[ri][sj - start] = s[sj];
-			chars--;
 			sj++;
 		}
 		result[ri][sj - start] = '\0';
@@ -91,16 +87,3 @@ static size_t	count_arrays(const char *s, char c)
 	else
 		return (sep + 1);
 }
-
-// int	main(void)
-// {
-// 	const char	**result = (const char **) ft_split("This is 42!", ' ');
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (result[i] != NULL)
-// 	{
-// 		printf("[%zu] %s\n", i, result[i]);
-// 		i++;
-// 	}
-// }
