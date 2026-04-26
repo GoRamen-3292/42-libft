@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 12:27:15 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 15:24:03 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,17 +90,19 @@ int	main(void)
 	atoi_test("-1");
 	atoi_test("2147483647");
 	atoi_test("-2147483648");
+	atoi_test("+0");
 	atoi_test("+2147483647");
 	atoi_test(" 		-2147483648");
 	atoi_test(" 		-2147483648");
 	atoi_test("		-2147483648");
+	atoi_test(" 	+2147483647");
 	printf("Error\n");
 	atoi_test("---2147483648");
 	atoi_test("_2147483648");
 	printf("Overflow Testing... ");
 	ft_atoi("2147483648");
 	// Overflow
-	ft_atoi(" 214747543059841356974580237853645987612865471846987358792654183648");
+	ft_atoi(" -214747543059841356974580237853645987612865471846987358792654183648");
 	// Overflow
 	printf("OK!\n");
 	printf("\n== toupper ==\n");
@@ -122,6 +124,8 @@ int	main(void)
 	printf("\n=== ft_substr ===\n");
 	substr_test("1234567890", 0, 0);
 	substr_test("1234567890", 0, 3);
+	substr_test("", 0, 3);
+	substr_test("", 1, 3);
 	substr_test("1234567890", 2, 3);
 	substr_test("1234567890", 2, 7);
 	substr_test("1234567890", 2, 8);
