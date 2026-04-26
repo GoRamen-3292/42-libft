@@ -29,7 +29,14 @@ void	strjoin_test(const char *s1, const char *s2)
 
 void	itoa_test(const int n)
 {
-	char *result = ft_itoa(n);
+	char	*result;
+
+	result = ft_itoa(n);
 	printf("%i -> \"%s\"\n", n, result);
 	free(result);
+}
+
+void	strmapi_test(const char *s, char (*f)(unsigned int, char))
+{
+	printf("%s -> %s", s, ft_strmapi(s, f));
 }

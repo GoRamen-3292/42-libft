@@ -6,11 +6,13 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 09:41:05 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 10:26:38 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
+
+char	plus_3(unsigned int i, char a);
 
 int	main(void)
 {
@@ -141,7 +143,8 @@ int	main(void)
 	itoa_test(-99);
 	itoa_test(INT_MAX);
 	itoa_test(INT_MIN);
-	
+	printf("\n=== ft_strmapi ===\n");
+	strmapi_test("ABCDEFGabcdefg0123456", plus_3);
 }
 
 int	int_tester(const int exp, const int res)
@@ -190,4 +193,10 @@ void	display_memory(void *ptr, size_t size)
 	// 	c_ptr++;
 	// }
 	printf("\n");
+}
+
+char	plus_3(unsigned int i, char a)
+{
+	(void) (i);
+	return (a + 3);
 }
