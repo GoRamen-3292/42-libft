@@ -29,3 +29,4 @@ void	calloc_test(const size_t count, const size_t size);
 void	substr_test(char *str, unsigned int start, size_t max_len);
 void	strjoin_test(const char *s1, const char *s2);
 void	strtrim_test(const char *s1, const char *set);
+void	itoa_test(const int n);

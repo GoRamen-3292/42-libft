@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 18:09:31 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 09:41:05 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,21 @@ int	main(void)
 	strtrim_test("Tuuuuhis iuuuuus 42uuuuuuu", "up$");
 	strtrim_test("This is 42u", " ");
 	strtrim_test("This\b\t is \v42u", "\b\t\v ");
+	printf("\n=== ft_itoa ===\n");
+	itoa_test(0);
+	itoa_test(1);
+	itoa_test(9);
+	itoa_test(10);
+	itoa_test(99);
+	itoa_test(100);
+	itoa_test(999);
+	itoa_test(-1);
+	itoa_test(-9);
+	itoa_test(-10);
+	itoa_test(-99);
+	itoa_test(INT_MAX);
+	itoa_test(INT_MIN);
+	
 }
 
 int	int_tester(const int exp, const int res)
