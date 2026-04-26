@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 11:05:56 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 11:39:11 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,8 +129,20 @@ int	main(void)
 	strjoin_test("", "bbbbb");
 	printf("\n=== ft_strtrim ===\n");
 	strtrim_test("Tuuuuhis iuuuuus 42uuuuuuu", "up$");
+	strtrim_test("Tuuuuhis iuuuuus 42uuuuuuu", "uuup$");
 	strtrim_test("This is 42u", " ");
 	strtrim_test("This\b\t is \v42u", "\b\t\v ");
+	strtrim_test("This iuuuuus 42uuuuuuu", "");
+	strtrim_test("", "This iuuuuus 42uuuuuuu");
+	strtrim_test("", "");
+	printf("\n=== ft_split ===\n");
+	split_test("This is 42", ' ');
+	split_test(" This is 42", ' ');
+	split_test("This is 42 ", ' ');
+	split_test(" This is 42 ", ' ');
+	split_test(" This       is               42 ", ' ');
+	split_test("", ' ');
+	split_test("This is 42", '\0');
 	printf("\n=== ft_itoa ===\n");
 	itoa_test(0);
 	itoa_test(1);
@@ -147,8 +159,10 @@ int	main(void)
 	itoa_test(INT_MIN);
 	printf("\n=== ft_strmapi ===\n");
 	strmapi_test("ABCDEFGabcdefg0123456", plus_3);
+	strmapi_test("", plus_3);
 	printf("\n=== ft_striteri ===\n");
 	striteri_test("ABCDEFGabcdefg0123456");
+	striteri_test("");
 }
 
 int	int_tester(const int exp, const int res)

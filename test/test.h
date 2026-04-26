@@ -32,3 +32,4 @@ void	strtrim_test(const char *s1, const char *set);
 void	itoa_test(const int n);
 void	strmapi_test(const char *s, char (*f)(unsigned int, char));
 void	striteri_test(const char *str);
+void	split_test(const char *str, char sep);
