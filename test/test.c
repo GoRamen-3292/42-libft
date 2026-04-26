@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 10:26:38 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 11:05:56 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,15 +89,17 @@ int	main(void)
 	atoi_test("2147483647");
 	atoi_test("-2147483648");
 	atoi_test("+2147483647");
-	atoi_test(" 	 -2147483648");
-	atoi_test(" 	 -2147483648");
+	atoi_test(" 		-2147483648");
+	atoi_test(" 		-2147483648");
 	atoi_test("		-2147483648");
 	printf("Error\n");
 	atoi_test("---2147483648");
 	atoi_test("_2147483648");
 	printf("Overflow Testing... ");
-	ft_atoi("2147483648"); // Overflow
-	ft_atoi(" 214747543059841356974580237853645987612865471846987358792654183648"); // Overflow
+	ft_atoi("2147483648");
+	// Overflow
+	ft_atoi(" 214747543059841356974580237853645987612865471846987358792654183648");
+	// Overflow
 	printf("OK!\n");
 	printf("\n== toupper ==\n");
 	int_tester('A', toupper('a'));
@@ -145,6 +147,8 @@ int	main(void)
 	itoa_test(INT_MIN);
 	printf("\n=== ft_strmapi ===\n");
 	strmapi_test("ABCDEFGabcdefg0123456", plus_3);
+	printf("\n=== ft_striteri ===\n");
+	striteri_test("ABCDEFGabcdefg0123456");
 }
 
 int	int_tester(const int exp, const int res)
@@ -173,7 +177,7 @@ int	ptr_tester(const void *exp, const void *res, int output_as_str)
 }
 void	display_memory(void *ptr, size_t size)
 {
-	char		*c_ptr;
+	char	*c_ptr;
 	size_t	i;
 
 	i = 0;
@@ -197,6 +201,6 @@ void	display_memory(void *ptr, size_t size)
 
 char	plus_3(unsigned int i, char a)
 {
-	(void) (i);
+	(void)(i);
 	return (a + 3);
 }

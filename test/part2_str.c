@@ -1,5 +1,7 @@
 #include "test.h"
 
+void	plus_3_iteri(unsigned int i, char *a);
+
 void	substr_test(char *str, unsigned int start, size_t max_len)
 {
 	char	*result;
@@ -39,4 +41,20 @@ void	itoa_test(const int n)
 void	strmapi_test(const char *s, char (*f)(unsigned int, char))
 {
 	printf("%s -> %s", s, ft_strmapi(s, f));
+}
+
+void	striteri_test(const char *str)
+{
+	char	*iter_str;
+
+	iter_str = ft_strdup(str);
+	ft_striteri(iter_str, plus_3_iteri);
+	printf("%s -> %s\n", str, iter_str);
+	free(iter_str);
+}
+
+void	plus_3_iteri(unsigned int i, char *a)
+{
+	(void)(i);
+	*a = *a + 3;
 }
