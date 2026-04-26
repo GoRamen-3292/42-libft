@@ -6,14 +6,11 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 14:42:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 11:38:45 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 15:16:46 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// TODO: DELETE THIS
-#include <stdio.h>
 
 static size_t	count_arrays(const char *s, char c);
 static char		**store_arrays(const char *s, const char c, char **result,
