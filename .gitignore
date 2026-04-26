@@ -5,3 +5,4 @@ src/tmp*
 a.out
 *.gch
 *.pch
+tmp_test.txt

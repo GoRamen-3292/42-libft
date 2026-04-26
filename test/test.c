@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 11:39:11 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 12:27:15 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	plus_3(unsigned int i, char a);
 
 int	main(void)
 {
+	const int	fd = open("tmp_test.txt", O_RDWR | O_CREAT, 0644);
+
 	printf("Testing the libft...\n");
 	printf("###### Part 1. libc ######\n");
 	printf("== isalpha ==\n");
@@ -163,6 +165,34 @@ int	main(void)
 	printf("\n=== ft_striteri ===\n");
 	striteri_test("ABCDEFGabcdefg0123456");
 	striteri_test("");
+	printf("\n=== ft_*_fd -> tmp_test.txt ===\n");
+	ft_putstr_fd("=== ft_putchar_fd ===\n", fd);
+	ft_putchar_fd('O', fd);
+	ft_putchar_fd('K', fd);
+	ft_putchar_fd('!', fd);
+	ft_putchar_fd('\n', fd);
+	ft_putstr_fd("\n=== ft_putstr_fd ===\n", fd);
+	ft_putstr_fd("", fd);
+	ft_putstr_fd("OK!\n", fd);
+	ft_putstr_fd("\n=== ft_putendl_fd ===\n", fd);
+	ft_putendl_fd("OK!", fd);
+	ft_putendl_fd("", fd);
+	ft_putstr_fd("=== ft_putnbr_fd ===\n", fd);
+	ft_putnbr_fd(0, fd);
+	ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(1, fd);
+	ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(-9, fd);
+	ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(-9, fd);
+	ft_putnbr_fd(INT_MAX, fd);
+	ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(-9, fd);
+	ft_putnbr_fd(INT_MIN, fd);
+	ft_putchar_fd('\n', fd);
+	ft_putnbr_fd(-9, fd);
+	printf("\n\n###### Part 3. Linked Lists... ######\n");
+
 }
 
 int	int_tester(const int exp, const int res)

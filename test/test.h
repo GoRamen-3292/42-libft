@@ -7,6 +7,7 @@
 #include <string.h>
 #include <strings.h>
 #include <unistd.h>
+#include <fcntl.h>
 
 int		int_tester(const int exp, const int res);
 void	display_memory(void *ptr, size_t size);
