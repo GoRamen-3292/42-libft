@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 17:28:47 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 17:32:56 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/27 19:48:47 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*current_list;
+	t_list	*current_node;
 
-	current_list = lst;
-	while (current_list->next != NULL)
+	current_node = lst;
+	while (current_node->next != NULL)
 	{
-		current_list = current_list->next;
+		current_node = current_node->next;
 	}
-	return (current_list);
+	return (current_node);
 }

@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 18:32:56 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 18:34:02 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/27 22:15:22 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	
+	del(lst->content);
+	free(lst);
 }
