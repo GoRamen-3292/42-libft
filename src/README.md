@@ -1,4 +1,4 @@
-This project has been created as part of the 42 curriculum by ktomita.
+*This project has been created as part of the 42 curriculum by ktomita.*
 
 このプロジェクトは、42カリキュラムの一環として、ktomitaによって作成されました。
 
@@ -14,7 +14,7 @@ TODO: 書き込む
 
 ## Resources
 
-###
+### 
 
 - Visual Studio Code経由で閲覧したシンタックスハイライト
 
