@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 10:57:53 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 14:49:03 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 19:09:32 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,10 @@ static size_t	calc_len(const char *s, unsigned int start, size_t max_len)
 {
 	const size_t	s_len = ft_strlen(s);
 
-	if (s_len - start < max_len)
+	// TODO: start文字列の範囲の外から始まったときの例外処理を足す　
+	if (s_len > start)
+		return (0);
+	else if (s_len - start < max_len)
 		return (s_len - start);
 	else
 		return (max_len);

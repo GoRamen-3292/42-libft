@@ -19,15 +19,15 @@ void	memset_test(const size_t size, int val)
 
 void	memmove_test(void)
 {
-	char		str_1[1000] = "42_________________________________________";
-	char		str_2[1000] = "__________42_____________________________";
+	char		str_1[1000] = "42123456781234567842_________________________________________";
+	char		str_2[1000] = "__________42123456781234567842_____________________________";
 	const int	offset = 10;
 
 	printf("Before: %s\n", str_1);
-	printf("Result: %s\n", (char *)ft_memmove(&str_1[offset], str_1, 2));
+	printf("Result: %s\n", (char *)ft_memmove(&str_1[offset], str_1, 20));
 	printf("After: %s\n", str_1);
 	printf("Before: %s\n", &str_2[offset]);
-	printf("Result: %s\n", (char *)ft_memmove(str_2, &str_2[offset], 2));
+	printf("Result: %s\n", (char *)ft_memmove(str_2, &str_2[offset], 20));
 	printf("After: %s\n", str_2);
 }
 

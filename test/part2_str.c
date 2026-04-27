@@ -40,7 +40,11 @@ void	itoa_test(const int n)
 
 void	strmapi_test(const char *s, char (*f)(unsigned int, char))
 {
-	printf("\"%s\" -> \"%s\"\n", s, ft_strmapi(s, f));
+	char	*result;
+
+	result = ft_strmapi(s, f);
+	printf("\"%s\" -> \"%s\"\n", s, result);
+	free(result);
 }
 
 void	striteri_test(const char *str)
@@ -62,9 +66,10 @@ void	plus_3_iteri(unsigned int i, char *a)
 
 void	split_test(const char *str, char sep)
 {
-	const char **result = (const char **)ft_split(str, sep);
-	size_t i;
+	char	**result;
+	size_t	i;
 
+	result = ft_split(str, sep);
 	i = 0;
 	printf("%s ->\n", str);
 	while (result[i] != NULL)
@@ -72,4 +77,11 @@ void	split_test(const char *str, char sep)
 		printf("[%zu] \"%s\"\n", i, result[i]);
 		i++;
 	}
+	i = 0;
+	while (result[i] != NULL)
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
 }

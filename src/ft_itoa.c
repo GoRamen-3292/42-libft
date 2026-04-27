@@ -6,14 +6,11 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 16:53:28 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 11:40:00 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/26 15:16:54 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// TODO: DELETE THIS
-#include <stdio.h>
 
 static unsigned int	get_digits(int n);
 static void			set_sign_and_numbers(const int n, char *dest,
