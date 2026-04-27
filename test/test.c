@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 15:24:03 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/27 19:30:22 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,7 @@ int	main(void)
 	substr_test("1234567890", 2, 7);
 	substr_test("1234567890", 2, 8);
 	substr_test("1234567890", 2, 10000);
+	substr_test("1234567890", 1000000, 10000);
 	printf("\n=== ft_strjoin ===\n");
 	strjoin_test("aaaaa", "bbbbb");
 	strjoin_test("", "bbbbb");
