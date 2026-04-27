@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 14:42:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/26 15:16:46 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/27 19:23:38 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ static size_t	count_arrays(const char *s, char c)
 {
 	size_t	i;
 	size_t	sep;
+	int		cur_sep;
 	int		prev_sep;
 
 	i = 0;
@@ -68,15 +69,10 @@ static size_t	count_arrays(const char *s, char c)
 	prev_sep = TRUE;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c && !prev_sep)
-		{
+		cur_sep = (s[i] == c);
+		if (cur_sep && !prev_sep)
 			sep++;
-			prev_sep = TRUE;
-		}
-		else if (s[i] != c)
-			prev_sep = FALSE;
-		else
-			prev_sep = TRUE;
+		prev_sep = cur_sep;
 		i++;
 	}
 	if (prev_sep)

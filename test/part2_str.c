@@ -7,7 +7,7 @@ void	substr_test(char *str, unsigned int start, size_t max_len)
 	char	*result;
 
 	result = ft_substr(str, start, max_len);
-	printf("%s, start: %u, max_len: %lu\n%s\n", str, start, max_len, result);
+	printf("\"%s\", start: %u, max_len: %lu\n-> \"%s\"\n", str, start, max_len, result);
 	free(result);
 }
 
