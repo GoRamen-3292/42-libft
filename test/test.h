@@ -1,13 +1,19 @@
 #include "../src/libft.h"
 #include <bsd/string.h>
 #include <ctype.h>
+#include <fcntl.h>
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
 #include <unistd.h>
-#include <fcntl.h>
+
+// Constants
+#define C_CLASS_MATCHED 1
+#define C_CLASS_UNMATCHED 0
+#define TRUE 1
+#define FALSE 0
 
 int		int_tester(const int exp, const int res);
 void	display_memory(void *ptr, size_t size);
@@ -34,3 +40,4 @@ void	itoa_test(const int n);
 void	strmapi_test(const char *s, char (*f)(unsigned int, char));
 void	striteri_test(const char *str);
 void	split_test(const char *str, char sep);
+int		linked_lst_test(void);

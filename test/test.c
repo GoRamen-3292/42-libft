@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/27 19:30:22 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/28 15:23:06 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -197,7 +197,7 @@ int	main(void)
 	ft_putchar_fd('\n', fd);
 	ft_putnbr_fd(-9, fd);
 	printf("\n\n###### Part 3. Linked Lists... ######\n");
-
+	linked_lst_test();
 }
 
 int	int_tester(const int exp, const int res)
