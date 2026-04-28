@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 18:36:35 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/28 16:21:19 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/28 17:50:21 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst == NULL || f == NULL)
-		return ;
 	t_list	*current_node;
 
+	if (lst == NULL || f == NULL)
+		return ;
 	current_node = lst;
 	while (current_node != NULL)
 	{

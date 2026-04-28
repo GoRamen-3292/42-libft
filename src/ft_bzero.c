@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:52:26 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 14:50:20 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/28 17:48:40 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	if (s == NULL)
+		return ;
 	ft_memset(s, 0, n);
 }
