@@ -7,7 +7,7 @@ int	linked_lst_test(void)
 {
 	char	*str;
 	t_list	*lst;
-	// t_list	*last_node;
+	t_list	*last_node;
 	t_list	*node_zero;
 	t_list	*node_two;
 	t_list	*node_three;
@@ -30,20 +30,19 @@ int	linked_lst_test(void)
 	ft_lstiter(lst, print_content);
 	printf("\n=== delete 3 ===\n");
 	ft_lstdelone(node_three, fn_null);
-	// node_two->next = NULL;
-	ft_lstlast(lst)->next = NULL;
+	node_two->next = NULL;
 	ft_lstiter(lst, print_content);
 	printf("\n=== add_back 3 again ===\n");
 	node_three = ft_lstnew(&str[3]);
 	ft_lstadd_back(&lst, node_three);
 	ft_lstiter(lst, print_content);
-	printf("\n6. clear the list\n");
+	printf("\n=== clear the list ===\n");
 	ft_lstclear(&lst, fn_null);
-	// printf("Now trying to break the code...");
-	// fflush(stdout);
-	// last_node = ft_lstnew(&str[4]);
-	// ft_lstadd_back(&lst, node_three);
-	// free(str);
+	printf("Now trying to break the code...\n");
+	fflush(stdout);
+	last_node = ft_lstnew(&str[4]);
+	ft_lstadd_back(&lst, last_node);
+	free(str);
 	return (0);
 }
 
