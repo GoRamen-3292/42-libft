@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 18:37:36 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/27 22:18:48 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/28 16:21:53 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_current_node;
 	t_list	*new_prev_node;
 
+	if (lst == NULL || f == NULL || del == NULL)
+		return (NULL);
 	src_current_node = lst;
 	new_list = ft_lstnew(lst->content);
 	new_list->content = f(new_list->content);
