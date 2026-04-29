@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/28 15:23:06 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 15:52:44 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,17 +106,17 @@ int	main(void)
 	// Overflow
 	printf("OK!\n");
 	printf("\n== toupper ==\n");
-	int_tester('A', toupper('a'));
-	int_tester('K', toupper('k'));
-	int_tester('Z', toupper('z'));
-	int_tester('A', toupper('A'));
-	int_tester(' ', toupper(' '));
+	int_tester('A', ft_toupper('a'));
+	int_tester('K', ft_toupper('k'));
+	int_tester('Z', ft_toupper('z'));
+	int_tester('A', ft_toupper('A'));
+	int_tester(' ', ft_toupper(' '));
 	printf("\n== tolower ==\n");
-	int_tester('a', tolower('A'));
-	int_tester('k', tolower('K'));
-	int_tester('z', tolower('Z'));
-	int_tester('a', tolower('a'));
-	int_tester(' ', tolower(' '));
+	int_tester('a', ft_tolower('A'));
+	int_tester('k', ft_tolower('K'));
+	int_tester('z', ft_tolower('Z'));
+	int_tester('a', ft_tolower('a'));
+	int_tester(' ', ft_tolower(' '));
 	printf("\n=== calloc ===\n");
 	calloc_test(5, 4);
 	calloc_test(0, 0);
