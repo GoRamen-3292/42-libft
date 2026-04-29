@@ -6,11 +6,11 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 15:47:41 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 18:00:52 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 15:47:42 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')
 		return (c - 'A' + 'a');
