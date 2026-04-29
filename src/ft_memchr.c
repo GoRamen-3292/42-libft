@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 12:00:31 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 12:08:02 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 15:58:38 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_memchr(const void *s, int c, size_t n)
 
 	buf = (char *)s;
 	i = 0;
-	while (buf[i] != '\0' && i < n)
+	while (i < n)
 	{
 		if (buf[i] == c)
 			return (&buf[i]);
