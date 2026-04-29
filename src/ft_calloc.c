@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 19:32:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/29 10:11:17 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 15:57:03 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	total_size;
-	char	*result;
+	t_byte	*result;
 
 	total_size = nmemb * size;
 	if (total_size == 0)

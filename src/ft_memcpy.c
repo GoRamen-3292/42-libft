@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:04:59 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 14:50:20 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 16:05:06 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	const char	*c_src = src;
-	const char	*last = dest + n - 1;
-	char		*c_dest;
+	const t_byte	*c_src = src;
+	const t_byte	*last = dest + n - 1;
+	t_byte			*c_dest;
 
 	c_dest = dest;
 	while (c_dest <= last)

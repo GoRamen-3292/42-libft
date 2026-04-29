@@ -26,6 +26,7 @@
 # define FALSE 0
 
 // typedef
+typedef unsigned char	t_byte;
 
 // Prototypes
 // - Part 1.

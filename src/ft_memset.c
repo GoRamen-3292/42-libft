@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 13:14:31 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 14:50:20 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 16:12:53 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*ptr;
-	char	*last_ptr;
+	t_byte	*ptr;
+	t_byte	*last_ptr;
 
-	ptr = (char *)s;
-	last_ptr = (char *)s + n - 1;
+	ptr = (t_byte *)s;
+	last_ptr = (t_byte *)s + n - 1;
 	while (ptr <= last_ptr)
 	{
 		*ptr = c;
