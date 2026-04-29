@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 20:26:06 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/28 20:08:58 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 09:58:49 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,11 @@ char				*ft_strrchr(const char *str, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-// TODO: Completely match the prototypes
 char				*ft_strnstr(const char *big, const char *little,
 						size_t len);
 int					ft_atoi(const char *src);
 void				*ft_calloc(size_t nmemb, size_t size);
-char				*ft_strdup(const char *s1);
+char				*ft_strdup(const char *s);
 
 // - Part 2.
 char				*ft_substr(const char *s, unsigned int start, size_t len);
