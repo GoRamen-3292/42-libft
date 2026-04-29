@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 11:03:38 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 11:31:02 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 18:19:13 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	size_t	i;
+	t_byte const	*b_str = (t_byte const *)str;
+	size_t			i;
 
 	i = 0;
+	c &= 0xff; // TODO: Test for &= paramater, 0xff 
 	while (str[i] != '\0')
 	{
-		if (str[i] == c)
-			return ((char *)&str[i]);
+		if (b_str[i] == c)
+			return ((char *)&b_str[i]);
 		i++;
 	}
 	return (NULL);
