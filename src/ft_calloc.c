@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 19:32:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/28 17:48:59 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 10:11:17 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
+	size_t	total_size;
 	char	*result;
 
-	if (nmemb * size == 0)
-		return (malloc(1));
-	result = malloc(nmemb * size);
+	total_size = nmemb * size;
+	if (total_size == 0)
+		total_size = 1;
+	result = malloc(1);
 	if (result == NULL)
 		return (NULL);
-	ft_bzero(result, nmemb * size);
+	ft_bzero(result, total_size);
 	return (result);
 }
