@@ -2,6 +2,7 @@
 
 void	fn_null(void *result);
 void	print_content(void *c);
+void	*add_1_ptr(void *ptr);
 
 int	linked_lst_test(void)
 {
@@ -36,6 +37,11 @@ int	linked_lst_test(void)
 	node_three = ft_lstnew(&str[3]);
 	ft_lstadd_back(&lst, node_three);
 	ft_lstiter(lst, print_content);
+	printf("\n=== dupicate a list ===\n");
+	t_list *dup_list = ft_lstmap(lst, add_1_ptr, fn_null);
+	ft_lstiter(lst, print_content);
+	printf("\n");
+	ft_lstiter(dup_list, print_content);
 	printf("\n=== clear the list ===\n");
 	ft_lstclear(&lst, fn_null);
 	printf("Now trying to break the code...\n");
@@ -43,6 +49,7 @@ int	linked_lst_test(void)
 	last_node = ft_lstnew(&str[4]);
 	ft_lstadd_back(&lst, last_node);
 	free(str);
+	free(last_node);
 	return (0);
 }
 
@@ -56,4 +63,9 @@ void	print_content(void *c)
 {
 	printf("%c ", *(char *)c);
 	fflush(stdout);
+}
+
+void	*add_1_ptr(void *ptr)
+{
+	return ((char *)ptr + 1);
 }
