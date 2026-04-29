@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 14:42:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/27 19:23:38 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 10:05:06 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static size_t	count_arrays(const char *s, char c);
 static char		**store_arrays(const char *s, const char c, char **result,
 					const size_t arrays);
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	const size_t	arrays = count_arrays(s, c);
 	char			**result;

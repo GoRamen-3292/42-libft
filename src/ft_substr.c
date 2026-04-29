@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 10:57:53 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/27 19:32:46 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 10:03:57 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	calc_len(const char *s, unsigned int start, size_t max_len);
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	const size_t	res_len = calc_len(s, start, len);
 	char			*result;

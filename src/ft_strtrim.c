@@ -6,13 +6,13 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 11:52:31 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/25 14:14:58 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/29 10:04:47 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	s1_len;
 	size_t	matched_chs;
