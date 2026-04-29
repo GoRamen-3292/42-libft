@@ -6,3 +6,4 @@ a.out
 *.gch
 *.pch
 tmp_test.txt
+libft.a
