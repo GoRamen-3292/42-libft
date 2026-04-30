@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 19:32:37 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/30 14:32:19 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/30 14:58:14 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	if (size <= 0)
 		return (src_len);
 	i = 0;
-	while (src[i] != '\0' && i < size - 1)
+	while (src[i] != '\0' && i < size - 2)
 	{
 		dst[i] = src[i];
 		i++;
