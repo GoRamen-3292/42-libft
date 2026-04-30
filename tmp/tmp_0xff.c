@@ -3,8 +3,8 @@
 int	main(void)
 {
 	const int		 max = 265;
-	char 			result;
-	unsigned char	uc_result;
+	unsigned char 	result;
+	// unsigned char	uc_result;
 	int		i;
 
 	i = -265;
@@ -12,6 +12,6 @@ int	main(void)
 	{
 		i++;
 		result = i & 0xff;
-		printf("%i (%u): %i\n", i, (unsigned int)i, result);
+		printf("%i (%u): %i\n", i, (unsigned char)i, result);
 	}
 }
