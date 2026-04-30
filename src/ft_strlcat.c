@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 18:42:54 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/30 15:52:50 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/30 20:41:25 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i] = src[i - offset];
 		i++;
 	}
-	if (size >= 1)
-		dst[i] = '\0';
+	dst[i] = '\0';
 	return (src_size + offset);
 }
