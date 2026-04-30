@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 11:52:31 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/29 10:04:47 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/04/30 13:39:17 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	matched_chs = 0;
 	while (s1[i] != '\0')
-		if (ft_strrchr(set, s1[i++]) != NULL)
+		if (ft_strchr(set, s1[i++]) != NULL)
 			matched_chs++;
 	s1_len = i;
 	result = malloc(sizeof(char) * (s1_len - matched_chs + 1));
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	rj = 0;
 	while (s1[i] != '\0')
 	{
-		if (ft_strrchr(set, s1[i]) == NULL)
+		if (ft_strchr(set, s1[i]) == NULL)
 			result[rj++] = s1[i];
 		i++;
 	}
