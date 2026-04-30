@@ -45,10 +45,14 @@ void	strchr_test(void)
 	const char	*str = "This is 42!";
 	const char	*exp_result = strchr(str, 's');
 	const char	*act_result = ft_strchr(str, 's');
-	const char	*act_nul_result = ft_strchr(str, 'z');
+	const char	*act_null_result = ft_strchr(str, 'z');
+	const char	*exp_nul_result = strchr(str, '\0');
+	const char	*act_nul_result = ft_strchr(str, '\0');
 
 	ptr_tester(exp_result, act_result, 1);
-	ptr_tester(NULL, act_nul_result, 0);
+	ptr_tester(NULL, act_null_result, 0);
+	ptr_tester(exp_nul_result, act_nul_result, 0);
+
 }
 
 void	strrchr_test(void)
