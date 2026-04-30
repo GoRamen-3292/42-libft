@@ -20,3 +20,8 @@
 
 - これってNULLポインタとか渡されたときの処理必要?
 - overflow, underflow?
+- &=でbit演算をしている
+  - 255 -> 11111111 (2)
+  - これを「かつ」で分岐をすれば確かに256で割った値が出る
+  
+- https://leo.nit.ac.jp/~tamura/ex2/expression.html#bit
