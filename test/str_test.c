@@ -33,12 +33,46 @@ void	strlcpy_test(void)
 void	strlcat_test(void)
 {
 	char			dest[30] = "This is ";
+	char			dest_2[30] = "This is ";
 	const char		src[3] = "42";
-	const size_t	size = 20;
+	const size_t	size = 21;
+	int				res;
 
-	ft_strlcat(dest, src, size);
 	printf("%s\n", dest);
+	printf("Exp:\n");
+	printf("%s | %s\n", src, dest);
+	res = strlcat(dest, src, 0);
+	printf("%s | %s (%i)\n", src, dest, res);
+	memset(9 + dest, '_', size);
+	res = strlcat(dest, src, 4);
+	printf("%s | %s (%i) ->", src, dest, res);
 	display_memory(dest, size);
+	memset(9 + dest, '_', size);
+	res = strlcat(dest, src, 12);
+	printf("%s | %s (%i) ->", src, dest, res);
+	display_memory(dest, size);
+	memset(9 + dest, '_', size);
+	res = strlcat(dest, src, 30);
+	printf("%s | %s (%i) ->", src, dest, res);
+	display_memory(dest, size);
+	printf("\nAct:\n");
+	printf("%s | %s\n", src, dest_2);
+	memset(9 + dest_2, '_', size);
+	res = ft_strlcat(dest_2, src, 0);
+	printf("%s | %s (%i)\n", src, dest_2, res);
+	memset(9 + dest_2, '_', size);
+	res = ft_strlcat(dest_2, src, 4);
+	printf("%s | %s (%i) -> ", src, dest_2, res);
+	display_memory(dest_2, size);
+	memset(9 + dest_2, '_', size);
+	res = ft_strlcat(dest_2, src, 12);
+	printf("%s | %s (%i) ->", src, dest_2, res);
+	display_memory(dest_2, size);
+	memset(9 + dest_2, '_', size);
+	res = ft_strlcat(dest_2, src, 30);
+	printf("%s | %s (%i) ->", src, dest_2, res);
+	display_memory(dest_2, size);
+	memset(9 + dest_2, '_', size);
 }
 
 void	strchr_test(void)
