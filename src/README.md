@@ -54,6 +54,10 @@ int					ft_atoi(const char *src);
 void				*ft_calloc(size_t nmemb, size_t size);
 // 文字列をmallocによりメモリを確保した上で複製する関数
 char				*ft_strdup(const char *s);
+// 英数の大文字のASCIIを小文字に変換するコード
+int						ft_tolower(int c);
+// 英語の小文字のASCIIを大文字に変換するコード
+int						ft_toupper(int c);
 
 // 文字列 s の中のインデックス start から最大 len 文字の文字列をコピーする関数
 char				*ft_substr(char const *s, unsigned int start, size_t len);
@@ -114,7 +118,7 @@ int					ft_lstsize(t_list *lst);
 
 - `make` コマンドが使用可能なこと
 - `cc` コマンドが使用可能なこと
-- `re` コマンド
+- `ar` コマンドが使用可能なこと
 
 ### 動作確認をした環境
 
@@ -145,7 +149,7 @@ Selected multilib: .;@m64
 
 ## Resources
 
-### 
+### Visual Studio Code
 
 - Visual Studio Code経由で閲覧したシンタックスハイライト
 
@@ -164,3 +168,5 @@ Selected multilib: .;@m64
 ### Websites
 
 - https://code.aetheria.jp/161
+- https://leo.nit.ac.jp/~tamura/ex2/expression.html#bit
+- https://www.man7.org/linux/man-pages/man3/isascii.3p.html
