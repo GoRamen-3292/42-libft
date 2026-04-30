@@ -19,6 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t			offset;
 
 	i = 0;
+    // sizeが0の時...
 	while (dst[i] != '\0' && i + 1 < size)
 		i++;
 	offset = i;
