@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 17:33:44 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/30 20:28:41 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/05/01 18:31:55 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current_node;
 
-	if (lst == NULL || *lst == NULL || new == NULL)
+	if (lst == NULL || new == NULL)
 		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
 	current_node = *lst;
 	while (current_node->next != NULL)
 		current_node = current_node->next;
