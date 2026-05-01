@@ -170,3 +170,7 @@ Selected multilib: .;@m64
 - https://code.aetheria.jp/161
 - https://leo.nit.ac.jp/~tamura/ex2/expression.html#bit
 - https://www.man7.org/linux/man-pages/man3/isascii.3p.html
+- https://learn.microsoft.com/ja-jp/cpp/c-runtime-library/reference/malloc?view=msvc-170
+- https://qiita.com/tatsubey/items/6a5328d5e1306131765f
+- https://gmaj7sus4.hatenablog.com/entry/2013/11/15/041451
+- https://zenn.dev/keitean/articles/aaef913b433677
