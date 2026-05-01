@@ -32,10 +32,10 @@ void	strlcpy_test(void)
 
 void	strlcat_test(void)
 {
-	char			dest[30] = "This is ";
-	char			dest_2[30] = "This is ";
+	char			dest[30] = "This is                      ";
+	char			dest_2[30] = "This is                      ";
 	const char		src[3] = "42";
-	const size_t	size = 21;
+	const size_t	size = 20;
 	int				res;
 
 	printf("%s\n", dest);
