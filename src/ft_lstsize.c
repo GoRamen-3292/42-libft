@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 17:25:26 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/30 20:05:31 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/05/01 17:04:05 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_lstsize(t_list *lst)
 	size = 1;
 	while (current_node->next != NULL)
 	{
-		current_node = lst->next;
+		current_node = current_node->next;
 		size++;
 	}
 	return (size);
