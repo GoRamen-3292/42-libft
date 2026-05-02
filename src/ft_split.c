@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 14:42:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/29 10:05:06 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/05/02 13:30:32 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ static char	**store_arrays(const char *s, const char c, char **result,
 		while (s[sj] != c && s[sj] != '\0')
 			sj++;
 		result[ri] = malloc(sizeof(char) * sj - start + 1);
+		if (result[ri] == NULL)
+			return ();
 		sj = start;
 		while (s[sj] != c && s[sj] != '\0')
 		{
