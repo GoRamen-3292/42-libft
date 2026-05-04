@@ -45,7 +45,8 @@ static char	**store_arrays(const char *s, const char c, char **result,
 			sj++;
 		result[ri] = malloc(sizeof(char) * sj - start + 1);
 		if (result[ri] == NULL)
-			return ();
+			return (NULL);
+			// Free here
 		sj = start;
 		while (s[sj] != c && s[sj] != '\0')
 		{
