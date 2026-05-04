@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 19:32:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/05/04 20:22:44 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/05/04 22:39:27 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	const size_t	total_size = nmemb * size;
 	t_byte			*result;
 
-	if (size == 0 || nmemb == 0 || SIZE_MAX / size < nmemb)
+	if (size != 0 && SIZE_MAX / size < nmemb)
 		return (NULL);
 	if (total_size <= 0)
 		return (malloc(0));
