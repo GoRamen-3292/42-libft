@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 14:42:57 by ktomita           #+#    #+#             */
-/*   Updated: 2026/05/02 13:30:32 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/05/04 20:17:12 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static size_t	count_arrays(const char *s, char c);
 static char		**store_arrays(const char *s, const char c, char **result,
 					const size_t arrays);
+static char **free_all(char **result);
 
 char	**ft_split(char const *s, char c)
 {
@@ -33,6 +34,7 @@ static char	**store_arrays(const char *s, const char c, char **result,
 	size_t	ri;
 	size_t	sj;
 	size_t	start;
+	size_t	size;
 
 	ri = 0;
 	sj = 0;
@@ -43,17 +45,11 @@ static char	**store_arrays(const char *s, const char c, char **result,
 		start = sj;
 		while (s[sj] != c && s[sj] != '\0')
 			sj++;
-		result[ri] = malloc(sizeof(char) * sj - start + 1);
+		size = sj - start + 1;
+		result[ri] = malloc(sizeof(char) * size);
 		if (result[ri] == NULL)
-			return (NULL);
-			// Free here
-		sj = start;
-		while (s[sj] != c && s[sj] != '\0')
-		{
-			result[ri][sj - start] = s[sj];
-			sj++;
-		}
-		result[ri][sj - start] = '\0';
+			return (free_all(result));
+		ft_strlcpy(result[ri], &s[start], size);
 		ri++;
 	}
 	result[ri] = NULL;
@@ -82,4 +78,18 @@ static size_t	count_arrays(const char *s, char c)
 		return (sep);
 	else
 		return (sep + 1);
+}
+
+static char **free_all(char **result)
+{
+	size_t	i;
+
+	i = 0;
+	while (result[i] != NULL)
+	{
+		free(result[i]);
+		result[i] = NULL;
+	}
+	free(result);
+	return (NULL);
 }
