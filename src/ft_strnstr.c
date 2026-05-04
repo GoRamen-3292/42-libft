@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 13:02:12 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/24 13:27:40 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/05/04 20:30:35 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	start = 0;
 	i = 0;
+	if (len == 0)
+		return (NULL);
 	if (little[0] == '\0')
 		return ((char *) big);
 	while (start < len)
