@@ -120,6 +120,10 @@ void	strnstr_test(void)
 {
 	const char	*big = "I really really really really like 42";
 	const char	*small = "really";
+	const char	*empty = "really";
 
 	ptr_tester(strnstr(big, small, 38), ft_strnstr(big, small, 38), 1);
+	ptr_tester(strnstr(big, empty, 38), ft_strnstr(big, empty, 38), 1);
+	ptr_tester(strnstr(big, small, 0), ft_strnstr(big, small, 0), 1);
+	ptr_tester(strnstr(big, empty, 0), ft_strnstr(big, empty, 0), 1);
 }
