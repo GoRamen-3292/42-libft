@@ -12,9 +12,11 @@
 
 #include "libft.h"
 
+static void	f_set_chars(char *str, int n);
 static unsigned int	get_digits(int n);
 static void			set_sign_and_numbers(const int n, char *dest,
 						const unsigned int digits);
+static int	int_abs(const int n);
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -24,7 +26,7 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putstr_fd(str, fd);
 }
 
-void	f_set_chars(char *str, int n)
+static void	f_set_chars(char *str, int n)
 {
 	const unsigned int	digits = get_digits(n);
 	const unsigned int	chars = digits + (n <= 0);
