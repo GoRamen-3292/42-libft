@@ -6,7 +6,7 @@
 /*   By: ktomita <ktomita@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 19:49:14 by ktomita           #+#    #+#             */
-/*   Updated: 2026/04/29 15:52:44 by ktomita          ###   ########.fr       */
+/*   Updated: 2026/05/04 21:35:35 by ktomita          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,6 +142,8 @@ int	main(void)
 	strtrim_test("This iuuuuus 42uuuuuuu", "");
 	strtrim_test("", "This iuuuuus 42uuuuuuu");
 	strtrim_test("", "");
+	strtrim_test("   c   c c cc c c c", "c ");
+	strtrim_test("   c   c ca cc c c c", "c ");
 	printf("\n=== ft_split ===\n");
 	split_test("This is 42", ' ');
 	split_test(" This is 42", ' ');
